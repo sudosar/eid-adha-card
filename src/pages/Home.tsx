@@ -26,6 +26,7 @@ import { IslamicBorder } from "@/components/IslamicBorder";
 import { GreetingTop, GreetingArabic, GreetingBottom } from "@/components/GreetingText";
 import { ShareButton } from "@/components/ShareButton";
 import { AudioPlayer } from "@/components/AudioPlayer";
+import { DuaParticleLayer, useDuaParticles } from "@/components/DuaParticles";
 
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -115,10 +116,21 @@ function LoadingScreen({ onComplete }: { onComplete: () => void }) {
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
+  const { particles, spawn } = useDuaParticles();
 
   const handleLoadingComplete = useCallback(() => {
     setShowContent(true);
   }, []);
+
+  const handleSkyClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      // Ignore taps on buttons, links, or the Kaaba (which stops propagation)
+      const target = e.target as HTMLElement;
+      if (target.closest("button, a")) return;
+      spawn(e.clientX, e.clientY);
+    },
+    [spawn]
+  );
 
   return (
     <div
@@ -137,6 +149,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
           className="relative w-full h-full"
+          onClick={handleSkyClick}
         >
           {/* Sky layers */}
           <SunriseSky />
@@ -156,29 +169,17 @@ export default function Home() {
           {/* Islamic geometric border */}
           <IslamicBorder />
 
-          {/* === TEXT ZONES === */}
+          {/* Dua particles — spawned on sky tap */}
+          <DuaParticleLayer particles={particles} />
 
-          {/* TOP: "Dear Name" — near top of screen */}
+          {/* === TEXT ZONES — single flex column filling the sky above the Kaaba === */}
+          {/* bottom: 42% keeps the text out of the Kaaba zone (Kaaba top ≈ 58–65% from top) */}
           <div
-            className="absolute left-0 right-0 z-[30] flex justify-center pointer-events-none"
-            style={{ top: "4vh" }}
+            className="absolute left-0 right-0 z-[30] flex flex-col items-center justify-evenly pointer-events-none"
+            style={{ top: "2vh", bottom: "42%" }}
           >
             <GreetingTop />
-          </div>
-
-          {/* MID: Arabic — upper-middle of sky */}
-          <div
-            className="absolute left-0 right-0 z-[30] flex justify-center pointer-events-none"
-            style={{ top: "18vh" }}
-          >
             <GreetingArabic />
-          </div>
-
-          {/* BOTTOM: English + blessing — lower sky, still above Kaaba */}
-          <div
-            className="absolute left-0 right-0 z-[30] flex justify-center pointer-events-none"
-            style={{ top: "34vh" }}
-          >
             <GreetingBottom />
           </div>
 

@@ -13,6 +13,11 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "src"),
     },
   },
+  server: {
+    headers: {
+      "X-Frame-Options": "ALLOWALL",
+    },
+  },
   build: {
     outDir: "dist",
     emptyOutDir: true,

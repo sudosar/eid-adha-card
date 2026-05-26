@@ -13,7 +13,8 @@ import { motion, AnimatePresence } from "framer-motion";
 export function KaabaScene() {
   const [glowing, setGlowing] = useState(false);
 
-  const handleTap = useCallback(() => {
+  const handleTap = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation(); // don't bubble up to sky tap handler
     if (glowing) return;
     setGlowing(true);
     setTimeout(() => setGlowing(false), 2000);

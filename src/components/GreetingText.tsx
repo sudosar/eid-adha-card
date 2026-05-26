@@ -113,13 +113,13 @@ export function GreetingBottom() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 1.3 }}
-        className="font-display uppercase tracking-widest"
+        className="font-display uppercase tracking-widest whitespace-nowrap"
         style={{
-          fontSize: "clamp(1.1rem, 4.5vw, 2rem)",
+          fontSize: "clamp(0.85rem, 3.8vw, 2rem)",
           color: "#E8DCC8",
           textShadow:
             "0 2px 12px rgba(13,8,32,0.9), 0 0 30px rgba(240,199,94,0.15)",
-          letterSpacing: "0.18em",
+          letterSpacing: "clamp(0.06em, 0.8vw, 0.18em)",
         }}
       >
         Eid al-Adha Mubarak
