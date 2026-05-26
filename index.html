@@ -4,10 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0D0820" />
-    <title>Eid al-Adha Mubarak</title>
-    <meta name="description" content="Wishing you a blessed Eid al-Adha filled with peace, joy, and Allah's blessings." />
-    <meta property="og:title" content="Eid al-Adha Mubarak" />
-    <meta property="og:description" content="A personalized Eid al-Adha greeting for you." />
+
+    <!-- Default meta — overwritten below if ?name= is in the URL -->
+    <title>Eid al-Adha Mubarak — عيد الأضحى مبارك</title>
+    <meta name="description" content="May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings. Eid al-Adha Mubarak!" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eid al-Adha Mubarak" />
+    <meta property="og:title" content="Eid al-Adha Mubarak — عيد الأضحى مبارك" />
+    <meta property="og:description" content="May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings." />
+    <meta property="og:image" content="https://sudosar.github.io/eid-adha-card/og-cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eid al-Adha Mubarak — عيد الأضحى مبارك" />
+    <meta name="twitter:description" content="May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings." />
+    <meta name="twitter:image" content="https://sudosar.github.io/eid-adha-card/og-cover.png" />
+    <meta name="twitter:image:alt" content="Eid al-Adha Mubarak — عيد الأضحى مبارك" />
+
+    <!--
+      Dynamic OG tag injection.
+      Runs synchronously in <head> so it fires before the browser makes
+      any caching decisions. Social crawlers that do execute JS (e.g. some
+      versions of WhatsApp Web, Telegram) will pick this up.
+      For crawlers that don't run JS, the static defaults above are used.
+    -->
+    <script>
+      (function () {
+        var p = new URLSearchParams(location.search);
+        var name = p.get('name') ? decodeURIComponent(p.get('name')).trim() : '';
+        var msg  = p.get('msg')  ? decodeURIComponent(p.get('msg')).trim()  : '';
+
+        var title = name
+          ? 'Eid al-Adha Mubarak, ' + name + '! — عيد الأضحى مبارك'
+          : 'Eid al-Adha Mubarak — عيد الأضحى مبارك';
+
+        var desc = name
+          ? 'A special Eid al-Adha greeting for ' + name + '. May Allah accept your sacrifice and grant you His infinite mercy and blessings.' + (msg ? ' — ' + msg : '')
+          : 'May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings. Eid al-Adha Mubarak!';
+
+        function set(sel, attr, val) {
+          var el = document.querySelector(sel);
+          if (el) el.setAttribute(attr, val);
+        }
+
+        document.title = title;
+        set('meta[name="description"]',          'content', desc);
+        set('meta[property="og:title"]',         'content', title);
+        set('meta[property="og:description"]',   'content', desc);
+        set('meta[name="twitter:title"]',        'content', title);
+        set('meta[name="twitter:description"]',  'content', desc);
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />

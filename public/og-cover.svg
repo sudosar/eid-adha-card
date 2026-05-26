@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D0820"/>
+      <stop offset="45%" stop-color="#2D1060"/>
+      <stop offset="75%" stop-color="#7B2D00"/>
+      <stop offset="100%" stop-color="#C45A00"/>
+    </linearGradient>
+    <!-- Horizon glow -->
+    <radialGradient id="hglow" cx="50%" cy="75%" r="40%">
+      <stop offset="0%" stop-color="#F0A020" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F0A020" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Dune gradient -->
+    <linearGradient id="dune1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5E1A"/>
+      <stop offset="100%" stop-color="#3D2000"/>
+    </linearGradient>
+    <linearGradient id="dune2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B4510"/>
+      <stop offset="100%" stop-color="#2A1500"/>
+    </linearGradient>
+    <!-- Kaaba face gradients -->
+    <linearGradient id="kFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="kSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="kTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <!-- Door gradient -->
+    <linearGradient id="door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8960A"/>
+      <stop offset="50%" stop-color="#F0C75E"/>
+      <stop offset="100%" stop-color="#A07008"/>
+    </linearGradient>
+    <!-- Hizam belt -->
+    <linearGradient id="hizam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="30%" stop-color="#F0C75E"/>
+      <stop offset="70%" stop-color="#F0C75E"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <!-- Gold glow -->
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F0C75E" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F0C75E" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Border gradient -->
+    <linearGradient id="borderH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(240,199,94,0)"/>
+      <stop offset="30%" stop-color="rgba(240,199,94,0.7)"/>
+      <stop offset="70%" stop-color="rgba(240,199,94,0.7)"/>
+      <stop offset="100%" stop-color="rgba(240,199,94,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <!-- Horizon glow -->
+  <rect width="1200" height="630" fill="url(#hglow)"/>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.7">
+    <circle cx="80" cy="60" r="1.5"/>
+    <circle cx="200" cy="40" r="1"/>
+    <circle cx="340" cy="80" r="1.5"/>
+    <circle cx="450" cy="30" r="1"/>
+    <circle cx="600" cy="55" r="2"/>
+    <circle cx="720" cy="40" r="1"/>
+    <circle cx="880" cy="65" r="1.5"/>
+    <circle cx="980" cy="35" r="1"/>
+    <circle cx="1100" cy="70" r="1.5"/>
+    <circle cx="150" cy="110" r="1"/>
+    <circle cx="300" cy="130" r="1.5"/>
+    <circle cx="500" cy="100" r="1"/>
+    <circle cx="700" cy="120" r="1"/>
+    <circle cx="900" cy="95" r="1.5"/>
+    <circle cx="1050" cy="115" r="1"/>
+  </g>
+
+  <!-- Kaaba glow aura -->
+  <ellipse cx="600" cy="360" rx="120" ry="80" fill="url(#goldGlow)" opacity="0.4"/>
+
+  <!-- Kaaba: top face -->
+  <polygon points="500,290 700,290 740,260 540,260" fill="url(#kTop)" stroke="rgba(240,199,94,0.3)" stroke-width="0.5"/>
+  <!-- Kaaba: right side face -->
+  <polygon points="700,290 740,260 740,420 700,450" fill="url(#kSide)" stroke="rgba(240,199,94,0.2)" stroke-width="0.5"/>
+  <!-- Kaaba: front face -->
+  <rect x="500" y="290" width="200" height="160" fill="url(#kFront)" stroke="rgba(240,199,94,0.25)" stroke-width="0.5"/>
+
+  <!-- Hizam belt on front face (at ~40% height = y 354) -->
+  <rect x="500" y="352" width="200" height="16" fill="url(#hizam)" opacity="0.85"/>
+  <!-- Diamond motifs on belt -->
+  <g fill="rgba(240,199,94,0.5)" stroke="none">
+    <polygon points="540,360 545,354 550,360 545,366"/>
+    <polygon points="570,360 575,354 580,360 575,366"/>
+    <polygon points="600,360 605,354 610,360 605,366"/>
+    <polygon points="630,360 635,354 640,360 635,366"/>
+    <polygon points="660,360 665,354 670,360 665,366"/>
+  </g>
+
+  <!-- Door (Bab al-Kaaba): centered on front face -->
+  <!-- Door frame -->
+  <rect x="570" y="355" width="60" height="95" rx="2" fill="rgba(240,199,94,0.9)" opacity="0.9"/>
+  <!-- Door recess -->
+  <rect x="573" y="358" width="54" height="89" rx="1" fill="url(#kFront)"/>
+  <!-- Left panel -->
+  <rect x="574" y="360" width="24" height="84" rx="1" fill="url(#door)"/>
+  <!-- Right panel -->
+  <rect x="602" y="360" width="24" height="84" rx="1" fill="url(#door)"/>
+  <!-- Center split line -->
+  <line x1="600" y1="360" x2="600" y2="444" stroke="rgba(0,0,0,0.4)" stroke-width="1"/>
+  <!-- Door handles -->
+  <circle cx="593" cy="402" r="3" fill="rgba(240,199,94,0.6)" stroke="rgba(240,199,94,0.9)" stroke-width="1"/>
+  <circle cx="607" cy="402" r="3" fill="rgba(240,199,94,0.6)" stroke="rgba(240,199,94,0.9)" stroke-width="1"/>
+  <!-- Top band on door -->
+  <rect x="574" y="360" width="52" height="12" rx="1" fill="rgba(240,199,94,0.4)"/>
+  <!-- Step/threshold -->
+  <rect x="566" y="447" width="68" height="8" rx="1" fill="rgba(240,199,94,0.3)"/>
+
+  <!-- Pole on Kaaba -->
+  <line x1="600" y1="270" x2="600" y2="292" stroke="rgba(240,199,94,0.8)" stroke-width="2"/>
+  <!-- Crescent on pole -->
+  <path d="M592,255 C592,247 599,242 607,243 C604,244 601,248 601,253 C601,258 604,262 607,263 C599,264 592,263 592,255Z" fill="rgba(240,199,94,0.9)"/>
+
+  <!-- Desert dunes -->
+  <path d="M0,520 Q150,460 350,490 Q500,510 600,480 Q720,450 900,490 Q1050,515 1200,490 L1200,630 L0,630Z" fill="url(#dune1)"/>
+  <path d="M0,560 Q200,520 400,545 Q600,565 800,535 Q1000,510 1200,545 L1200,630 L0,630Z" fill="url(#dune2)"/>
+
+  <!-- Top border line -->
+  <rect x="0" y="18" width="1200" height="1" fill="url(#borderH)" opacity="0.7"/>
+  <!-- Bottom border line -->
+  <rect x="0" y="611" width="1200" height="1" fill="url(#borderH)" opacity="0.7"/>
+
+  <!-- Arabic text: عيد الأضحى مبارك -->
+  <text
+    x="600" y="175"
+    text-anchor="middle"
+    font-family="serif"
+    font-size="72"
+    font-weight="bold"
+    fill="#F0C75E"
+    style="direction:rtl"
+  >عيد الأضحى مبارك</text>
+
+  <!-- English title -->
+  <text
+    x="600" y="232"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="28"
+    letter-spacing="6"
+    fill="#E8DCC8"
+    opacity="0.9"
+  >EID AL-ADHA MUBARAK</text>
+
+  <!-- Blessing text -->
+  <text
+    x="600" y="268"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="16"
+    fill="rgba(245,230,200,0.65)"
+  >May Allah accept your sacrifice and grant you His infinite mercy and blessings</text>
+
+  <!-- Divider line under text -->
+  <line x1="440" y1="140" x2="760" y2="140" stroke="rgba(240,199,94,0.4)" stroke-width="0.5"/>
+  <line x1="440" y1="285" x2="760" y2="285" stroke="rgba(240,199,94,0.25)" stroke-width="0.5"/>
+
+  <!-- Year label -->
+  <text
+    x="600" y="605"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="11"
+    letter-spacing="5"
+    fill="rgba(245,230,200,0.35)"
+  >EID AL-ADHA 1447 AH</text>
+</svg>

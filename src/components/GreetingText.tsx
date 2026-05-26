@@ -57,23 +57,7 @@ export function GreetingTop() {
           Dear{" "}
           <span style={{ color: "#F0C75E", fontWeight: 700 }}>{name}</span>,
         </motion.p>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="2" fill="rgba(240,199,94,0.7)" />
-            <path
-              d="M12 2 L13.5 8.5 L20 7 L14.8 11.5 L17.5 18 L12 14 L6.5 18 L9.2 11.5 L4 7 L10.5 8.5 Z"
-              fill="none"
-              stroke="rgba(240,199,94,0.5)"
-              strokeWidth="0.8"
-            />
-          </svg>
-        </motion.div>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -109,17 +93,17 @@ export function GreetingBottom() {
       className="flex flex-col items-center text-center px-6 pointer-events-none"
       style={{ maxWidth: "min(90vw, 480px)" }}
     >
-      {/* Small ornament */}
+      {/* Crescent ornament */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 1.2 }}
         className="mb-1"
       >
-        <svg width="16" height="16" viewBox="0 0 24 24">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
           <path
-            d="M12 2 L13.8 8.8 L20.6 8.8 L15.4 12.9 L17.2 19.7 L12 15.6 L6.8 19.7 L8.6 12.9 L3.4 8.8 L10.2 8.8 Z"
-            fill="rgba(240,199,94,0.7)"
+            d="M18 12 C18 8.13 15.12 4.92 11.37 4.1 C14.18 5.4 16 8.48 16 12 C16 15.52 14.18 18.6 11.37 19.9 C15.12 19.08 18 15.87 18 12Z"
+            fill="rgba(240,199,94,0.75)"
           />
         </svg>
       </motion.div>
@@ -154,9 +138,7 @@ export function GreetingBottom() {
           maxWidth: "38ch",
         }}
       >
-        {name
-          ? `May Allah accept your sacrifice and grant you and your family His infinite mercy and blessings, ${name}`
-          : "May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings"}
+        May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings
       </motion.p>
 
       {/* Custom message sign-off */}

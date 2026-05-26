@@ -35,38 +35,17 @@ export function IslamicBorder() {
         />
       </div>
 
-      {/* Corner ornaments — 8-pointed star motif */}
-      {(["top-left", "top-right", "bottom-left", "bottom-right"] as const).map(
-        (corner) => (
-          <div
-            key={corner}
-            className="absolute z-[25] pointer-events-none"
-            style={{
-              top: corner.startsWith("top") ? "2.5vh" : undefined,
-              bottom: corner.startsWith("bottom") ? "2.5vh" : undefined,
-              left: corner.endsWith("left") ? "5vw" : undefined,
-              right: corner.endsWith("right") ? "5vw" : undefined,
-            }}
-          >
-            <OrnamentStar />
-          </div>
-        )
-      )}
     </>
   );
 }
 
-function OrnamentStar() {
+function OrnamentCrescent() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      {/* 8-pointed star */}
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path
-        d="M12 2 L13.5 8.5 L20 7 L14.8 11.5 L17.5 18 L12 14 L6.5 18 L9.2 11.5 L4 7 L10.5 8.5 Z"
-        fill="none"
-        stroke="rgba(240,199,94,0.7)"
-        strokeWidth="0.8"
+        d="M19 12 C19 7.58 15.87 3.9 11.7 3 C15.1 4.5 17.5 8.0 17.5 12 C17.5 16.0 15.1 19.5 11.7 21 C15.87 20.1 19 16.42 19 12Z"
+        fill="rgba(240,199,94,0.7)"
       />
-      <circle cx="12" cy="12" r="1.5" fill="rgba(240,199,94,0.6)" />
     </svg>
   );
 }

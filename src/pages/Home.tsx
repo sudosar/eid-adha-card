@@ -25,6 +25,7 @@ import { GoldenParticles } from "@/components/GoldenParticles";
 import { IslamicBorder } from "@/components/IslamicBorder";
 import { GreetingTop, GreetingArabic, GreetingBottom } from "@/components/GreetingText";
 import { ShareButton } from "@/components/ShareButton";
+import { AudioPlayer } from "@/components/AudioPlayer";
 
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -192,6 +193,7 @@ export default function Home() {
 
           {/* UI Controls */}
           <ShareButton />
+          <AudioPlayer />
 
           {/* "Create Your Own" link */}
           <motion.div
