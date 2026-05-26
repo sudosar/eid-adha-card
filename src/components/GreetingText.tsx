@@ -71,7 +71,7 @@ export function GreetingArabic() {
         transition={{ duration: 1.2, delay: 0.9 }}
         className="font-arabic leading-tight"
         style={{
-          fontSize: "clamp(2.5rem, 10vw, 5rem)",
+          fontSize: "clamp(1.8rem, 8vw, 5rem)",
           color: "#F0C75E",
           direction: "rtl",
           fontWeight: 700,

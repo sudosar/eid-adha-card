@@ -172,15 +172,16 @@ export default function Home() {
           {/* Dua particles — spawned on sky tap */}
           <DuaParticleLayer particles={particles} />
 
-          {/* === TEXT ZONES — single flex column filling the sky above the Kaaba === */}
-          {/* bottom: 42% keeps the text out of the Kaaba zone (Kaaba top ≈ 58–65% from top) */}
+          {/* === TEXT ZONES === */}
           <div
-            className="absolute left-0 right-0 z-[30] flex flex-col items-center justify-evenly pointer-events-none"
-            style={{ top: "2vh", bottom: "42%" }}
+            className="absolute left-0 right-0 z-[30] flex flex-col items-center justify-between pointer-events-none"
+            style={{ top: "6vh", bottom: "30%", paddingBottom: "2vh" }}
           >
-            <GreetingTop />
             <GreetingArabic />
-            <GreetingBottom />
+            <div className="flex flex-col items-center">
+              <GreetingTop />
+              <GreetingBottom />
+            </div>
           </div>
 
           {/* Edge vignette */}

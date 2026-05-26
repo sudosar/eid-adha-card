@@ -15,6 +15,7 @@ export function DesertDunes() {
   return (
     <motion.div
       className="absolute left-0 right-0 bottom-0 z-[15] cursor-pointer"
+      style={{ height: "max(25vh, 30vw)" }}
       onClick={handleTap}
       animate={
         shimmer
@@ -27,7 +28,7 @@ export function DesertDunes() {
         viewBox="0 0 400 120"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ width: "100%", height: "auto", display: "block" }}
+        style={{ width: "100%", height: "100%", display: "block" }}
       >
         {/* Back dune — lighter, further away */}
         <path
