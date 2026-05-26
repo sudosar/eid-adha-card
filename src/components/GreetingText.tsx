@@ -86,7 +86,7 @@ export function GreetingArabic() {
 }
 
 export function GreetingBottom() {
-  const { name, msg } = useUrlParams();
+  const { msg } = useUrlParams();
 
   return (
     <div
