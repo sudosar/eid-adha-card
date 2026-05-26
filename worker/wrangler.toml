@@ -1,0 +1,5 @@
+name = "eid-adha-card"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Wrangler 3 auto-bundles *.wasm imports — no extra rules needed.

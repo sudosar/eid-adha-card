@@ -1,0 +1,17 @@
+{
+  "name": "eid-adha-card-worker",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@resvg/resvg-wasm": "^2.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250525.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  }
+}
