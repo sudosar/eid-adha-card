@@ -134,8 +134,8 @@ export default function Home() {
 
   return (
     <div
-      className="relative w-full h-screen overflow-hidden"
-      style={{ background: "#0D0820" }}
+      className="relative w-full overflow-hidden"
+      style={{ background: "#0D0820", height: "100dvh" }}
     >
       <AnimatePresence mode="wait">
         {!showContent && (

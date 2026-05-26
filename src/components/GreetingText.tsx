@@ -115,7 +115,7 @@ export function GreetingBottom() {
         transition={{ duration: 1.2, delay: 1.3 }}
         className="font-display uppercase tracking-widest whitespace-nowrap"
         style={{
-          fontSize: "clamp(0.85rem, 3.8vw, 2rem)",
+          fontSize: "clamp(1.05rem, 4vw, 2rem)",
           color: "#E8DCC8",
           textShadow:
             "0 2px 12px rgba(13,8,32,0.9), 0 0 30px rgba(240,199,94,0.15)",
@@ -132,7 +132,7 @@ export function GreetingBottom() {
         transition={{ duration: 1, delay: 1.6 }}
         className="font-body mt-1 leading-relaxed"
         style={{
-          fontSize: "clamp(0.75rem, 2.8vw, 1rem)",
+          fontSize: "clamp(0.95rem, 3vw, 1.1rem)",
           color: "rgba(245, 230, 200, 0.75)",
           textShadow: "0 1px 8px rgba(13,8,32,0.8)",
           maxWidth: "38ch",
@@ -149,7 +149,7 @@ export function GreetingBottom() {
           transition={{ duration: 1, delay: 1.9 }}
           className="font-body mt-1 italic"
           style={{
-            fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)",
+            fontSize: "clamp(0.9rem, 2.8vw, 1rem)",
             color: "rgba(240,199,94,0.75)",
             letterSpacing: "0.02em",
           }}
@@ -165,7 +165,7 @@ export function GreetingBottom() {
         transition={{ duration: 1, delay: msg ? 2.1 : 1.9 }}
         className="font-arabic mt-1"
         style={{
-          fontSize: "clamp(1rem, 3.5vw, 1.5rem)",
+          fontSize: "clamp(1.15rem, 4vw, 1.5rem)",
           color: "rgba(240,199,94,0.7)",
           direction: "rtl",
           fontWeight: 500,
