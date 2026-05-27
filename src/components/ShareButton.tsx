@@ -2,10 +2,15 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 
+const WORKER_BASE = "https://eid-adha-card.eidgreeting.workers.dev/";
+
 export function ShareButton() {
   const [open, setOpen] = useState(false);
 
-  const url = typeof window !== "undefined" ? window.location.href : "";
+  const url =
+    typeof window !== "undefined"
+      ? WORKER_BASE + (window.location.search || "")
+      : "";
 
   const copy = useCallback(async () => {
     try {

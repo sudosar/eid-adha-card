@@ -384,8 +384,13 @@ export default {
       name ? "no-store" : "public, max-age=300"
     );
 
+    const ogUrl = `${url.origin}/${url.search}`;
+
     // Stream the HTML through HTMLRewriter, patching meta tags in-place
     return new HTMLRewriter()
+      .on('meta[property="og:url"]', {
+        element(el) { el.setAttribute("content", ogUrl); },
+      })
       .on('meta[property="og:title"]', {
         element(el) { el.setAttribute("content", title); },
       })

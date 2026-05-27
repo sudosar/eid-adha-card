@@ -60,10 +60,7 @@ export default function Create() {
   const [showResult, setShowResult] = useState(false);
 
   const generatedUrl = useMemo(() => {
-    const base =
-      typeof window !== "undefined"
-        ? `${window.location.origin}${window.location.pathname.replace(/\/create\/?$/, "/")}`
-        : "/";
+    const base = "https://eid-adha-card.eidgreeting.workers.dev/";
     const params = new URLSearchParams();
     if (name.trim()) params.set("name", name.trim());
     if (msg.trim()) params.set("msg", msg.trim());

@@ -12,6 +12,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Eid al-Adha Mubarak" />
+    <meta property="og:url" content="https://eid-adha-card.eidgreeting.workers.dev/" />
     <meta property="og:title" content="Eid al-Adha Mubarak — عيد الأضحى مبارك" />
     <meta property="og:description" content="May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings." />
     <meta property="og:image" content="https://sudosar.github.io/eid-adha-card/og-cover.png" />
@@ -47,6 +48,9 @@
           ? 'A special Eid al-Adha greeting for ' + name + '. May Allah accept your sacrifice and grant you His infinite mercy and blessings.' + (msg ? ' — ' + msg : '')
           : 'May Allah accept your sacrifice and grant you and your loved ones His infinite mercy and blessings. Eid al-Adha Mubarak!';
 
+        var workerBase = 'https://eid-adha-card.eidgreeting.workers.dev/';
+        var ogUrl = workerBase + (location.search || '');
+
         function set(sel, attr, val) {
           var el = document.querySelector(sel);
           if (el) el.setAttribute(attr, val);
@@ -54,6 +58,7 @@
 
         document.title = title;
         set('meta[name="description"]',          'content', desc);
+        set('meta[property="og:url"]',           'content', ogUrl);
         set('meta[property="og:title"]',         'content', title);
         set('meta[property="og:description"]',   'content', desc);
         set('meta[name="twitter:title"]',        'content', title);
